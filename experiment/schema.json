@@ -1,15 +1,21 @@
 [
   {
-    "namespace": "hello",
-    "description": "Hello world",
-    "permissions": ["experiments.simple"],
+    "namespace": "showonlythesetabs",
+    "description": "WebExtension API to show only some tabs on the tab strip.",
+    "permissions": ["experiments.showonlythesetabs"],
     "functions": [
       {
-        "name": "hello",
+        "name": "showOnlyTheseTabs",
         "type": "function",
-        "description": "Returns the string \"Hello, world\"",
+        "description": "Returns nothing.",
         "async": true,
-        "parameters": []
+        "parameters": [
+          {
+            "name": "tabs",
+            "type": "array",
+            "items": { "$ref": "tabs.Tab" }
+          }
+        ]
       }
     ]
   }
