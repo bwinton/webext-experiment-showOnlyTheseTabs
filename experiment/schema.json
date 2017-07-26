@@ -7,7 +7,7 @@
       {
         "name": "showOnlyTheseTabs",
         "type": "function",
-        "description": "Returns nothing.",
+        "description": "Hides tabs other than the passed in ones.  Returns nothing.",
         "async": true,
         "parameters": [
           {
