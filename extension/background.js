@@ -1,10 +1,7 @@
 function hideAllOtherTabs() {
 
 	function onTabs(tabs) {
-		for (let tab of tabs) {
-			console.log('tab id', tab.id);
-  		browser.showonlythesetabs.showOnlyTheseTabs([tab.id]);
-		}
+  		browser.showonlythesetabs.showOnlyTheseTabs(tabs.map(tab => tab.id));
 	}
 
 	function onError(error) {
