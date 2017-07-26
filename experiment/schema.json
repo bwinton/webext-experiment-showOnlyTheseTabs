@@ -11,9 +11,9 @@
         "async": true,
         "parameters": [
           {
-            "name": "tabs",
+            "name": "tabIds",
             "type": "array",
-            "items": { "$ref": "tabs.Tab" }
+            "items": { "type": "number" }
           }
         ]
       }
