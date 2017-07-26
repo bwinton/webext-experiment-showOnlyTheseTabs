@@ -11,7 +11,7 @@ class API extends ExtensionAPI {
 
           // Convert WE tabs into XUL tabs
           var tabs = tabIds.map(function(tab) {
-            return extension.tabManager.get(tab.id, null);
+            return context.extension.tabManager.get(tab.id, null);
           });
 
           // Get current browser window
@@ -20,7 +20,7 @@ class API extends ExtensionAPI {
 					var browserWindow = wm.getMostRecentWindow("navigator:browser");
 
           // Set visible tabs
-          var tabbrowser = browserWindow.tabbrowser;
+          var tabbrowser = browserWindow.gBrowser;
           tabbrowser.showOnlyTheseTabs(tabs);
         }
       }
